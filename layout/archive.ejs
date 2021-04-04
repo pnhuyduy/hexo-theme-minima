@@ -1,23 +1,37 @@
-
-<h2>All Posts</h2>
-
-<% page.posts.each(function(post) { %>
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom"><%- full_date(post.date, 'll') %></p>
+<div class="container archives">
+  <div class="post-list">
+    <%
+      var prev = -10086;// prev year
+      var curr;// curr year, ever step be updated
+      site.posts.sort('date', -1).each(function(post, index) {
+        curr = post.date.year()
+        if (curr !== prev) {
+          prev = curr;
+      %>
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span><%- curr %></span>
+          </h2>
         </div>
-        <div class="nine columns left mb-3">
-          <a href="<%- url_for(post.path) %>" class="">
-            <% if (post.title == "") { %>
-              no title
-            <% } else { %>
-              <%- post.title %>
-            <% } %>
-          </a>
+      <%
+        }
+      %>
+      <article>
+        <div class="row">
+          <div class="three columns left lit">
+            <p class="bottom"><%- post.date.format("DD-MM") %></p>
+          </div>
+          <div class="nine columns left mb-3">
+            <a href="<%- url_for(post.path) %>" class="">
+              <% if (post.title == "") { %> no title <% } else { %> <%- post.title %>
+              <% } %>
+            </a>
+          </div>
         </div>
-      </div>
-    </article>
-<% }) %>
-<%- partial('partial/pagination', {type: 'page'}) %>
+      </article>
+    <%
+      });
+    %>
+  </div>
+</div>

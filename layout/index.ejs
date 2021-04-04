@@ -1,24 +1,13 @@
-<div class="row">
-  <div class="column">
-    <!-- Main information, edit it on theme/_config.yml -->
-    <h2 class="mb-2"><%= theme.owner %></h2>
-    <p><%= theme.info %></p>
-    <p><%= theme.desc %></p>
-  </div>
-</div>
-
-<h3>Recent Posts</h3>
-
-<% site.posts.sort('date', 'desc').limit(theme.max_post).forEach(function(post){ %>
+<% page.posts.each(function(post){ %>
 <div class="row">
 
   <div class="three columns left lit">
-    <p class="bottom"><%- full_date(post.date, 'll') %></p>
+    <p class="bottom"><%- post.date.format("DD-MM-YYYY") %></p>
   </div>
   <div class="nine columns left mb-3">
     <a href="<%- url_for(post.path) %>" >
       <% if (post.title == "") { %>
-        no title
+        Untitled
       <% } else { %>
         <%- post.title %>
       <% } %>
@@ -27,4 +16,12 @@
 </div>
 <% }) %>
 
-<h4> <a href="<%= config.root %>archives">All Posts</a></h4>
+<nav class="post-navigation">
+  <% if(page.prev !== 0){ %>
+    <a href="<%- url_for(page.prev_link)%>"><%= __('pagination.pre') %></a>
+  <% } %>
+  <span class="page-num"><%- page.current %> / <%- page.total -%></span>
+  <% if(page.next !== 0){ %>
+    <a href="<%- url_for(page.next_link)%>"><%= __('pagination.next') %></a>
+  <% } %>
+</nav>
