@@ -84,8 +84,11 @@
   <%- css('css/normalize.css') %>
   <%- css('css/skeleton.css') %>
   <%- css('css/custom.css') %>
+
+  <% if (is_post()) { %>
   <%- css('css/prism-dark.css') %>
   <%- css('css/prism-line-numbers.css') %>
+  <% } %>
   <!-- User css -->
   <% if (theme.usercss) { %>
   <%- css(theme.usercss) %>
