@@ -1,0 +1,12 @@
+{
+  "name": "minima",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pnhuyduy/hexo-theme-minima",
+  "author": "Huy Duy <huyduy.work@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp-clean-css": "^4.3.0"
+  }
+}
