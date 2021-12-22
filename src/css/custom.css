@@ -127,8 +127,8 @@ img {
   text-align: right;
 }
 
-.tag-link {
-  margin-right: 10px;
+.tag-link:before {
+  content: "#";
 }
 
 .about {
@@ -286,4 +286,21 @@ body.darkmode {
   #madewith {
     text-align: left;
   }
+}
+
+.copy-to-clipboard-button {
+  color: white !important;
+}
+
+.post-header {
+  text-align: center;
+}
+
+.post-title {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.post-meta {
+  padding-bottom: 10px;
 }

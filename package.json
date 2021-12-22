@@ -8,5 +8,8 @@
   "devDependencies": {
     "del": "^6.0.0",
     "gulp-clean-css": "^4.3.0"
+  },
+  "dependencies": {
+    "@jiangtj/hexo-next-pwa": "^3.0.2"
   }
 }

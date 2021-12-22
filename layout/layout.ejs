@@ -86,8 +86,9 @@
   <%- css('css/custom.css') %>
 
   <% if (is_post()) { %>
-  <%- css('css/prism-dark.css') %>
-  <%- css('css/prism-line-numbers.css') %>
+    <%- css('css/prism.css') %>
+    <%- css('css/prism-dark.css') %>
+  <%- js({src: 'js/prism.js', defer: true}) %>
   <% } %>
   <!-- User css -->
   <% if (theme.usercss) { %>

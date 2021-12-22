@@ -1,5 +1,10 @@
-  <h2><%- page.title %></h2>
-
+<div class="post-header">
+  <div class="post-title">
+    <%- page.title %>
+  </div>
+  <div class="post-meta">
+    <p><%- list_tags(page.tags, {class: 'tag', show_count: false, style: false}) %> — <%- full_date(page.date, 'LL') %></p>
+  </div>
+</div>
   <%- page.content%>
-  <p><%- list_tags(page.tags, {class: 'classtest', show_count: false, style: false}) %> — <%- full_date(page.date, 'll') %></p>
   <%- partial('partial/comments') %>
