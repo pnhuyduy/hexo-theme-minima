@@ -7,8 +7,10 @@
 
       navigator.serviceWorker.addEventListener('controllerchange', () => {
         if(reloading) return
-        reloading = true
-        window.location.reload()
+        if(window.location.pathname !== '/') {
+          reloading = true
+          window.location.reload()
+        }
       });
     });
   }
