@@ -7,4 +7,9 @@
   </div>
 </div>
   <%- page.content%>
-  <%- partial('partial/comments') %>
+  <div class="post-comments">
+    <% if (theme.comments.button) { %>
+      <button class="btn" id="comments-btn"><%= __('post.comments.btn') %></button>
+    <% } %>
+    <%- partial('partial/comments/' + theme.comments.type) %>
+  </div>

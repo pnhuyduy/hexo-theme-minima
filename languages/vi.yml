@@ -5,3 +5,6 @@ navigation:
 pagination:
   pre: Trước
   next: Tiếp
+post:
+  comments:
+    btn: Hiển thị bình luận

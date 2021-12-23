@@ -43,5 +43,18 @@ article:
 disqus_enabled: false
 disqus_shortname: https-adisaktijrs-github-io
 
+comments:
+  enable: false
+  type: valine
+  button: true
+
+valine:
+  appId: HVqwHnaQOpAXR5spr6bnJYc9-MdYXbMMI
+  appKey: gLDUzpFbSXRU87PEYXh1x7Iz
+  placeholder: Bình luận
+  avatar: retro
+  pageSize: 10
+  lang: en
+
 #language
 language: vi

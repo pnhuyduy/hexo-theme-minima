@@ -304,3 +304,7 @@ body.darkmode {
 .post-meta {
   padding-bottom: 10px;
 }
+
+.post-comments {
+  text-align: center;
+}
