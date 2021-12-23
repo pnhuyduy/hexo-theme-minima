@@ -1,0 +1,15 @@
+<script>
+  var reloading = false
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      
+      navigator.serviceWorker.register("/sw.js");
+
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if(reloading) return
+        reloading = true
+        window.location.reload()
+      });
+    });
+  }
+</script>

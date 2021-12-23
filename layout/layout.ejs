@@ -125,6 +125,10 @@
 
   </div>
   <script src="<%- theme.nanobar %>"></script>
+  <script src="<%- theme.nanobar %>"></script>
+  <script src="<%- theme.nanobar %>"></script>
+  <script src="<%- theme.nanobar %>"></script>
+  <script src="<%- theme.nanobar %>"></script>
   <script>
     var options = {
       classname: 'nanobar',
@@ -135,7 +139,9 @@
     nanobar.go(76);
     nanobar.go(100);
   </script>
-
+  <% if (config.pwa.serviceWorker.enable) { %>
+    <%- partial('partial/service_worker') %>
+  <% } %>
 </body>
 
 </html>
