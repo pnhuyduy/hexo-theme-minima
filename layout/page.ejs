@@ -1,3 +1,13 @@
-  <h2><%- page.title %></h2>
-
+<div class="post-header">
+  <div class="post-title">
+    <%- page.title %>
+  </div>
+  <div class="post-meta">
+    <% if (page.enable_date) { %>
+    <p class="datetime"><%= __('post.updated_at') %>
+      <span><%- full_date(page.updated, 'LL') %></span>
+    </p>
+    <% } %>
+  </div>
+</div>
   <%- page.content%>

@@ -2,9 +2,13 @@ navigation:
   home: Trang chủ
   archives: Lưu trữ
   about: Giới thiệu
+  tag: "Bài viết liên quan "
 pagination:
   pre: Trước
   next: Tiếp
 post:
+  updated_at: "Cập nhật:"
   comments:
     btn: Hiển thị bình luận
+tag:
+  related_to: "Bài viết liên quan"

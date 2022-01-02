@@ -3,7 +3,7 @@
     <%- page.title %>
   </div>
   <div class="post-meta">
-    <p><%- list_tags(page.tags, {class: 'tag', show_count: false, style: false}) %> — <%- full_date(page.date, 'LL') %></p>
+    <p><%- list_tags(page.tags, {class: 'tag', show_count: false, style: false}) %> — <span class="datetime"><%- full_date(page.date, 'LL') %></span></p>
   </div>
 </div>
   <%- page.content%>

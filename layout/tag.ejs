@@ -9,7 +9,7 @@
     }
 %>
 <% if(title) { %>
-   <h3>Posts Related to — <%- title %></h3>
+   <h3><%= __('tag.related_to') %> — <%- title %> (<%= page.posts.length %>)</h3>
 <% } %>
 <% page.posts.each(function(item){ %>
 

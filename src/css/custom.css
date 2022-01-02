@@ -10,6 +10,11 @@ img {
   margin-bottom: 1%;
 }
 
+ul {
+  list-style: none;
+  margin-left: 0;
+}
+
 @media (min-width: 550px) {
   /*
   Side by side gallery
@@ -307,4 +312,8 @@ body.darkmode {
 
 .post-comments {
   text-align: center;
+}
+
+p.datetime {
+  color: #6c757d;
 }
