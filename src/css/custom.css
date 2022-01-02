@@ -247,6 +247,10 @@ body.darkmode {
   color: rgb(230, 230, 230);
 }
 
+body.darkmode button {
+  color: rgb(230, 230, 230) !important;
+}
+
 .trans {
   animation: transitionPlay 0.7s;
 }
