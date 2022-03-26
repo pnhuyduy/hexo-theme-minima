@@ -324,3 +324,11 @@ body.darkmode button {
 p.datetime {
   color: #6c757d;
 }
+
+.tags a {
+  margin-right: 10px;
+}
+
+iframe {
+  height: 500px;
+}

@@ -3,6 +3,7 @@ navigation:
   archives: Lưu trữ
   about: Giới thiệu
   tag: "Bài viết liên quan "
+  tags: "Tags"
 pagination:
   pre: Trước
   next: Tiếp
